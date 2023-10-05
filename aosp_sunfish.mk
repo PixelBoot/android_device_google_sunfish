@@ -42,8 +42,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/handheld_vendor.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_vendor.mk)
 
 $(call inherit-product, device/google/sunfish/device-sunfish.mk)
-$(call inherit-product-if-exists, vendor/google_devices/sunfish/proprietary/device-vendor.mk)
-$(call inherit-product-if-exists, vendor/google_devices/sunfish/prebuilts/device-vendor-sunfish.mk)
+$(call inherit-product-if-exists, vendor/google/sunfish/proprietary/device-vendor.mk)
+$(call inherit-product-if-exists, vendor/google/sunfish/prebuilts/device-vendor-sunfish.mk)
+$(call inherit-product, vendor/google/sunfish/sunfish-vendor.mk)
 
 # Keep the VNDK APEX in /system partition for REL branches as these branches are
 # expected to have stable API/ABI surfaces.
