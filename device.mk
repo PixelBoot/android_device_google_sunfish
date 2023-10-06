@@ -380,6 +380,7 @@ PRODUCT_PACKAGES += \
     gralloc.sm6150 \
     android.hardware.graphics.mapper@3.0-impl-qti-display \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
+    vendor.display.config@2.0.vendor \
     vendor.qti.hardware.display.allocator-service
 
 # RenderScript HAL
