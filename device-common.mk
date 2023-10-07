@@ -139,3 +139,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Enable zygote critical window.
 PRODUCT_PROPERTY_OVERRIDES += \
     zygote.critical_window.minute=10
+
+# RCS packages (com.android.service.ims.presence and com.android.service.ims)
+PRODUCT_PACKAGES += \
+    PresencePolling \
+    RcsService
