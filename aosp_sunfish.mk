@@ -21,7 +21,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_system.mk)
 
 # Enable mainline checking
-#PRODUCT_ENFORCE_ARTIFACT_PATH_REQUIREMENTS := strict
+PRODUCT_ENFORCE_ARTIFACT_PATH_REQUIREMENTS := strict
 
 #
 # All components inherited here go to system_ext image
@@ -40,11 +40,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_product.mk)
 # TODO(b/136525499): move *_vendor.mk into the vendor makefile later
 $(call inherit-product, $(SRC_TARGET_DIR)/product/handheld_vendor.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_vendor.mk)
-
-# Inherit some common PixelExperience stuff
-TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_GAPPS_ARCH := arm64
-$(call inherit-product, vendor/pb/config/common_full_phone.mk)
 
 $(call inherit-product, device/google/sunfish/device-sunfish.mk)
 $(call inherit-product-if-exists, vendor/google_devices/sunfish/proprietary/device-vendor.mk)
@@ -66,15 +61,7 @@ PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_BROKEN_VERIFY_USES_LIBRARIES := true
 
 PRODUCT_MANUFACTURER := Google
-PRODUCT_BRAND := google
+PRODUCT_BRAND := Android
 PRODUCT_NAME := aosp_sunfish
 PRODUCT_DEVICE := sunfish
-PRODUCT_MODEL := Pixel 4a
-
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    TARGET_PRODUCT=sunfish \
-    PRIVATE_BUILD_DESC="sunfish-user 13 TQ3A.230805.001 10316531 release-keys"
-
-BUILD_FINGERPRINT := google/sunfish/sunfish:13/TQ3A.230805.001/10316531:user/release-keys
-
-$(call inherit-product, vendor/google/sunfish/sunfish-vendor.mk)
+PRODUCT_MODEL := AOSP on sunfish
