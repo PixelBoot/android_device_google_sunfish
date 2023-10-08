@@ -17,8 +17,8 @@
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/aosp_sunfish.mk \
     $(LOCAL_DIR)/aosp_sunfish_hwasan.mk \
-    $(LOCAL_DIR)/nitrogen_sunfish.mk \
+    $(LOCAL_DIR)/evolution_sunfish.mk
 
 COMMON_LUNCH_CHOICES := \
     aosp_sunfish-userdebug \
-    nitrogen_sunfish-userdebug
+    evolution_sunfish-userdebug
