@@ -11,6 +11,19 @@ set -e
 DEVICE=sunfish
 VENDOR=google
 
+function blob_fixup() {
+    case "${1}" in
+        vendor/lib64/android.hardware.keymaster@4.1-impl.nos.so)
+            # Replace  libprotobuf-cpp-full-3.9.1.so with stock libprotobuf-cpp-full-3.9.1.so
+            "${PATCHELF}" --replace-needed libprotobuf-cpp-full-3.9.1.so libprotobuf-cpp-stock-3.9.1.so "${2}"
+            ;;
+        vendor/lib64/libnosprotos.so)
+            # Replace  libprotobuf-cpp-full-3.9.1.so with stock libprotobuf-cpp-full-3.9.1.so
+            "${PATCHELF}" --replace-needed libprotobuf-cpp-full-3.9.1.so libprotobuf-cpp-stock-3.9.1.so "${2}"
+            ;;
+    esac
+}
+
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "${MY_DIR}" ]]; then MY_DIR="${PWD}"; fi
