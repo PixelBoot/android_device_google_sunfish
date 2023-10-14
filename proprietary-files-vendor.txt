@@ -1180,12 +1180,14 @@ vendor/lib64/libnetmgr_nr_fusion.so
 vendor/lib64/libnetmgr_rmnet_ext.so
 vendor/lib64/libnlnetmgr.so
 vendor/lib64/libnos_citadeld_proxy.so
+vendor/lib64/libnosprotos.so
 vendor/lib64/liboemcrypto.so
 vendor/lib64/libops.so
 vendor/lib64/libpdmapper.so
 vendor/lib64/libpdnotifier.so
 vendor/lib64/libperipheral_client.so
 vendor/lib64/libpower_anomaly_data.so
+vendor/lib64/libprotobuf-cpp-full-3.9.1.so
 vendor/lib64/libpvr.so
 vendor/lib64/libqcbor.so
 vendor/lib64/libqcc_file_agent.so

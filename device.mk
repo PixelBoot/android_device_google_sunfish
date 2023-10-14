@@ -466,6 +466,10 @@ PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-vendorcompat \
     libprotobuf-cpp-full-3.9.1-vendorcompat
 
+# Shims
+PRODUCT_PACKAGES += \
+    libnosprotos_shim
+
 # Sensor listener
 PRODUCT_PACKAGES += \
     lib_sensor_listener
