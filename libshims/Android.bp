@@ -1,6 +1,0 @@
-cc_library_shared {
-    name: "libnosprotos_shim",
-    srcs: ["libnosprotos/SetSystemVersionInfoRequest.cpp"],
-    shared_libs: ["libnosprotos"],
-    vendor: true,
-}
